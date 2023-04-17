@@ -1,8 +1,8 @@
 import { Button } from "../../components/Button";
-import { ButtonText } from "../../components/ButtonText";
 import { Input } from "../../components/Input";
-import { Background, ButtonsContainer, InputContainer, SignInContainer } from "./styles";
+import { Background, InputContainer, SignInContainer } from "./styles";
 import { FiMail, FiLock } from 'react-icons/fi'
+import { Link } from "react-router-dom"
 
 export function SignIn() {
   return (
@@ -22,12 +22,12 @@ export function SignIn() {
             <FiLock size={20}/>
           </Input>
         </InputContainer>
+      
+        <Button title="Entrar"/>
 
-        <ButtonsContainer>
-          <Button title="Entrar"/>
-
-          <ButtonText title="Criar conta"/>
-        </ButtonsContainer>
+        <Link to="/register">
+          Criar conta 
+        </Link>
       </form>
       <Background />
     </SignInContainer>

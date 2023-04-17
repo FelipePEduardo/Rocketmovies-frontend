@@ -11,6 +11,15 @@ export const ProfileContainer = styled.div`
     align-items: center;
 
     padding: 0 12.4rem;
+
+    > a {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+
+      color: ${({theme}) => theme.COLORS.PINK};
+      line-height: 0;
+    }
   }
 `
 

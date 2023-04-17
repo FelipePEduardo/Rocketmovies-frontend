@@ -51,6 +51,7 @@ export const ProfileContainer = styled.div`
       font-size: 1.4rem;
       line-height: 1.8rem;
       white-space: nowrap;
+      color: ${({ theme }) => theme. COLORS.GRAY_100}
     }
 
     span {

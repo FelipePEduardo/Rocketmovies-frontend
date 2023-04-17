@@ -2,6 +2,7 @@ import { Button } from "../../components/Button";
 import { Header } from "../../components/Header";
 import { ButtonContainer, CardContainer, CardsContainer, Container, MainContainer } from "./styles";
 import { FiStar, FiPlus } from 'react-icons/fi'
+import { Link } from "react-router-dom"
 
 export function Home() {
   return (
@@ -12,9 +13,10 @@ export function Home() {
         <div>
           <h1>Meus filmes</h1>
           <ButtonContainer>
-            <Button title="Adicionar filme">
+            <Link to="/createMovie">
               <FiPlus />
-            </Button>
+              Adicionar filme
+            </Link>
           </ButtonContainer>
         </div>
 

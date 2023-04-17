@@ -1,6 +1,11 @@
-import styled from "styled-components";
+import styled, { DefaultTheme } from "styled-components";
 
-export const MarkersContainer = styled.div`
+interface MarkersContainerProps {
+  theme: DefaultTheme
+  isNew?: boolean
+}
+
+export const MarkersContainer = styled.div<MarkersContainerProps>`
   border: 0;
   padding: 1.6rem;
   border-radius: 10px;

@@ -3,14 +3,16 @@ import { ButtonText } from "../../components/ButtonText";
 import { Avatar, Form, InputsContainer, ProfileContainer } from "./styles";
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
+import { Link } from "react-router-dom"
 
 export function Profile() {
   return (
     <ProfileContainer>
       <header>
-        <ButtonText title="Voltar">
+        <Link to="/">
           <FiArrowLeft />
-        </ButtonText>
+          Voltar
+        </Link>
       </header>
 
       <Form>

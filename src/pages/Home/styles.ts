@@ -17,11 +17,23 @@ export const MainContainer = styled.main`
     justify-content: space-between;
 
     margin-bottom: 4rem;
-  }
+  }  
 `
 
 export const ButtonContainer = styled.div`
   max-width: 20rem;
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    background: ${({theme}) => theme.COLORS.PINK};
+    color: ${({theme}) => theme.COLORS.BACKGROUND_800};
+
+    padding: 1.3rem ;
+    border-radius: 8px;
+  }
 `
 
 export const CardsContainer = styled.div`

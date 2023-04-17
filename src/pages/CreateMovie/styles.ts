@@ -14,6 +14,14 @@ export const CreateMovieContent = styled.main`
   gap: 2.4rem;
 
   margin: 4rem auto 8.5rem;
+
+  > a {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    color: ${({theme}) => theme.COLORS.PINK};
+  }
 `
 
 export const FormContainer = styled.form`

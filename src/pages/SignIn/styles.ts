@@ -32,7 +32,15 @@ export const SignInContainer = styled.div`
       font-weight: 500;
 
       margin-bottom: 4.8rem;
-    }    
+    }  
+    
+    a {
+      margin-top: 4.2rem;
+
+      text-align: center;
+      text-decoration: none;
+      color: ${({ theme}) => theme.COLORS.PINK};
+    }
   }
 `
 
@@ -42,14 +50,6 @@ export const InputContainer = styled.div`
   
   gap: 0.8rem;
   margin-bottom: 2.4rem;
-`
-
-export const ButtonsContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-  gap: 4.2rem;
 `
 
 export const Background = styled.div`
