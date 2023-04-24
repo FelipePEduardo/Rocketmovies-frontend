@@ -4,11 +4,12 @@ import { ReturnContainer } from "./styles";
 interface ReturnProps {
   title: string
   children?: ReactNode
+  onClick?: () => void
 }
 
-export function ButtonText({ title, children }: ReturnProps) {
+export function ButtonText({ title, children, onClick }: ReturnProps) {
   return (
-    <ReturnContainer type="button">
+    <ReturnContainer type="button" onClick={onClick}>
       {children}
       {title}
     </ReturnContainer>

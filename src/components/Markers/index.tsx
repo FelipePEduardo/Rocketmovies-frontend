@@ -1,3 +1,4 @@
+import { ChangeEvent } from "react";
 import { MarkersContainer } from "./styles"
 import { FiPlus, FiX } from 'react-icons/fi'
 
@@ -6,9 +7,10 @@ interface MarkersProps {
   value?: string
   onClick?: () => void
   placeholder?: string
+  onChange?: (e:ChangeEvent<HTMLInputElement>) => void
 }
 
-export function Markers({ isNew, value, onClick, placeholder}: MarkersProps) {
+export function Markers({ isNew, value, onClick, placeholder, onChange}: MarkersProps) {
   return (
     <MarkersContainer isNew={isNew}>
       <input 
@@ -16,6 +18,7 @@ export function Markers({ isNew, value, onClick, placeholder}: MarkersProps) {
         value={value} 
         readOnly={!isNew}
         placeholder={placeholder}
+        onChange={onChange}
       />
     
       <button onClick={onClick} type="button">

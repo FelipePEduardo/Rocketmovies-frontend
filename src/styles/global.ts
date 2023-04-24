@@ -37,4 +37,8 @@ export const GlobalStyle = createGlobalStyle`
   a:hover, button:hover {
     filter: brightness(0.9);
   }
+
+  :focus {
+    outline: none;
+  }
 `

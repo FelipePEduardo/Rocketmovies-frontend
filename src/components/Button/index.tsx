@@ -4,11 +4,13 @@ import { ButtonContainer } from "./styles";
 interface ButtonProps {
   title: string
   children?: ReactNode
+  type: 'button' | 'reset' | 'submit'
+  onCLick?: () => void
 }
 
-export function Button({ title, children }: ButtonProps) {
+export function Button({ title, children, type, onCLick}: ButtonProps) {
   return (
-    <ButtonContainer type="button">
+    <ButtonContainer type={type} onClick={onCLick}>
       {children}
       {title}
     </ButtonContainer>

@@ -54,8 +54,9 @@ export const Avatar = styled.div`
   margin: -10rem auto 6.4rem;
 
   img {
-    max-width: 18.6rem;
-    max-height: 18.6rem;
+    width: 18.6rem;
+    height: 18.6rem;
+
     border-radius: 999999px;
   }
 

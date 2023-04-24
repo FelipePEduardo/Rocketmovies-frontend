@@ -22,6 +22,15 @@ export const CreateMovieContent = styled.main`
 
     color: ${({theme}) => theme.COLORS.PINK};
   }
+
+  section {
+    h3 {
+      margin-bottom: 2.4rem;
+
+      color: ${({ theme }) => theme.COLORS.GRAY_300};
+      font-weight: 400;
+    }
+  }
 `
 
 export const FormContainer = styled.form`
@@ -41,6 +50,7 @@ export const FormContainer = styled.form`
     background: ${({ theme }) => theme.COLORS.BACKGROUND_700};
     border: 0;
     border-radius: 10px;
+    color: ${({ theme }) => theme.COLORS.GRAY_100};
   }
 `
 

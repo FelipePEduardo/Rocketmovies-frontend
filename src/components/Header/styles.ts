@@ -46,7 +46,7 @@ export const ProfileContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-
+    
     strong {
       font-size: 1.4rem;
       line-height: 1.8rem;
@@ -54,9 +54,11 @@ export const ProfileContainer = styled.div`
       color: ${({ theme }) => theme. COLORS.GRAY_100}
     }
 
-    span {
+    button {
       font-size: 1.4rem;
       color: ${({ theme }) => theme. COLORS.GRAY_300};
+      background: 0;
+      border: 0;
     }
   }
 `

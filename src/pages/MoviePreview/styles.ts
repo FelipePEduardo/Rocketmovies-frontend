@@ -14,6 +14,13 @@ export const MoviePreviewContainer = styled.main`
   > section {
     margin-top: 2.4rem;
   }
+
+  > a {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: ${({ theme }) => theme.COLORS.PINK}
+  }
 `
 
 export const TitleContainer = styled.div`

@@ -1,25 +1,41 @@
+import { ChangeEvent } from 'react' 
 import { Input } from "../Input";
 import { HeaderContainer, HeaderContent, ProfileContainer } from "./styles";
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
+import { useAuth } from '../../hooks/auth'
+import { api } from "../../services/api";
+import avatarPlaceholder from '../../assets/avatar_placeholder.svg'
 
-export function Header() {
+interface HeaderProps {
+  onSearch?: (e:ChangeEvent<HTMLInputElement>) => void
+}
+
+export function Header({onSearch}: HeaderProps) {
+  const { signOut, user } = useAuth()
+
+  const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder
+
   return (
     <HeaderContainer>
       <HeaderContent>
         
-        <a href="">RocketMovies</a>
-        <Input type="text" title="Pesquisar pelo título" />
+        <NavLink to="/">RocketMovies</NavLink>
+        <Input 
+          type="text" 
+          title="Pesquisar pelo título"
+          onChange={onSearch} 
+        />
         
         <ProfileContainer >
           <div>
             <Link to="/profile">
-              <strong>Felipe Eduardo</strong>
+              <strong>{user.name}</strong>
             </Link>
-            <span>sair</span>
+            <button onClick={signOut}>sair</button>
           </div>
 
           <Link to="/profile">
-            <img src="https://github.com/FelipePEduardo.png" alt="" />
+            <img src={avatarUrl} alt={user.name} />
           </Link>
         </ProfileContainer>
       </HeaderContent>
