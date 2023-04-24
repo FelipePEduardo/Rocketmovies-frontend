@@ -1,7 +1,7 @@
 import { ChangeEvent } from 'react' 
 import { Input } from "../Input";
 import { HeaderContainer, HeaderContent, ProfileContainer } from "./styles";
-import { Link, NavLink } from "react-router-dom"
+import { Link, NavLink, useNavigate } from "react-router-dom"
 import { useAuth } from '../../hooks/auth'
 import { api } from "../../services/api";
 import avatarPlaceholder from '../../assets/avatar_placeholder.svg'
@@ -12,6 +12,12 @@ interface HeaderProps {
 
 export function Header({onSearch}: HeaderProps) {
   const { signOut, user } = useAuth()
+  const navigate = useNavigate()
+
+  function handleSignOut() {
+    navigate("/")
+    signOut()
+  }
 
   const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder
 
@@ -31,7 +37,7 @@ export function Header({onSearch}: HeaderProps) {
             <Link to="/profile">
               <strong>{user.name}</strong>
             </Link>
-            <button onClick={signOut}>sair</button>
+            <button onClick={handleSignOut}>sair</button>
           </div>
 
           <Link to="/profile">
